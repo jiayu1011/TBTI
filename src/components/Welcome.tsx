@@ -24,24 +24,24 @@ export default function Welcome() {
         </div>
         
         <h2 className="text-3xl font-black text-gray-800 mb-2 tracking-tight">
-          徒步人格大测试
+          徒步佬人格大测试
         </h2>
         <p className="text-emerald-600 font-bold text-lg mb-4">TBTI - TuBu Type Indicator</p>
         
-        {/* 神秘园氛围文案 */}
-        <div className="bg-gradient-to-br from-slate-800 via-purple-900 to-slate-900 rounded-xl p-5 mb-6 text-center border border-purple-700/50 shadow-lg shadow-purple-500/20">
-          <p className="text-purple-200 text-sm italic mb-3 font-light tracking-wide">
-            "在海拔4000米的垭口，风会告诉你答案"
+        {/* 神秘园风格文案 */}
+        <div className="bg-gradient-to-br from-red-900 via-orange-900 to-amber-900 rounded-xl p-5 mb-6 text-center border border-red-700/50 shadow-lg shadow-red-500/20">
+          <p className="text-amber-200 text-sm italic mb-3 font-light tracking-wide">
+            ⚠️ 恐惧是生物的本能，勇气是人类的赞歌！
           </p>
-          <p className="text-purple-300 text-xs leading-relaxed opacity-80">
-            每一个深夜打包的背包，每一张手绘的路书，<br/>
-            每一次站在山脊线上的沉默，<br/>
-            都是灵魂与山野的对话。
+          <p className="text-orange-300 text-xs leading-relaxed opacity-80">
+            看了300多期神秘园，终于决定在这个冬季，<br/>
+            无装备无补给，没带卫星电话，没有氧气瓶，没有向导，<br/>
+            20分钟速穿九曜山，海拔连续爬升可达200米，天黑之前成功下撤。
           </p>
           <div className="flex justify-center gap-2 mt-3">
-            <span className="text-lg">🏔️</span>
-            <span className="text-lg">🌙</span>
-            <span className="text-lg">✨</span>
+            <span className="text-lg">⚠️</span>
+            <span className="text-lg">�️</span>
+            <span className="text-lg">💀</span>
             <span className="text-lg">🥾</span>
           </div>
         </div>
