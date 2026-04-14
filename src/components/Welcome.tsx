@@ -28,24 +28,6 @@ export default function Welcome() {
         </h2>
         <p className="text-emerald-600 font-bold text-lg mb-4">TBTI - TuBu Type Indicator</p>
         
-        {/* 神秘园风格文案 */}
-        <div className="bg-gradient-to-br from-red-900 via-orange-900 to-amber-900 rounded-xl p-5 mb-6 text-center border border-red-700/50 shadow-lg shadow-red-500/20">
-          <p className="text-amber-200 text-sm italic mb-3 font-light tracking-wide">
-            ⚠️ 恐惧是生物的本能，勇气是人类的赞歌！
-          </p>
-          <p className="text-orange-300 text-xs leading-relaxed opacity-80">
-            看了300多期神秘园，终于决定在这个冬季，<br/>
-            无装备无补给，没带卫星电话，没有氧气瓶，没有向导，<br/>
-            20分钟速穿九曜山，海拔连续爬升可达200米，天黑之前成功下撤。
-          </p>
-          <div className="flex justify-center gap-2 mt-3">
-            <span className="text-lg">⚠️</span>
-            <span className="text-lg">�️</span>
-            <span className="text-lg">💀</span>
-            <span className="text-lg">🥾</span>
-          </div>
-        </div>
-
         <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl p-4 mb-6 text-left border border-orange-100">
           <p className="text-xs text-orange-700 mb-2 font-semibold">🗣️ 为了确保咱们可以同频交流，希望以下词你至少理解5个：</p>
           <p className="text-xs text-orange-600 leading-relaxed">
