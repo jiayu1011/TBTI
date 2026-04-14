@@ -322,7 +322,7 @@ export interface Question {
   text: string;
   options: {
     text: string;
-    value: "E" | "C" | "S" | "W" | "T" | "I" | "M" | "P";
+    value: string;
   }[];
 }
 
@@ -333,10 +333,10 @@ export const questions: Question[] = [
     dimension: "EC",
     text: "你们队在武功山草甸上迷路了，两步路APP显示前面有条没标记的野径，领队让你做决定：",
     options: [
-      { text: "走！野径才是武功山的精髓，说不定能发现绝美机位", value: "E" },
-      { text: "原地等，发求救信号，或者原路返回找标记", value: "C" },
-      { text: "先派一个人探路，安全了全队再走", value: "C" },
-      { text: "打开六只脚看看有没有轨迹，没有就不冒险", value: "C" }
+      { text: "走！野径才是武功山的精髓，说不定能发现绝美机位", value: "E1" },
+      { text: "原地等，发求救信号，或者原路返回找标记", value: "C1" },
+      { text: "先派一个人探路，安全了全队再走", value: "C2" },
+      { text: "打开六只脚看看有没有轨迹，没有就不冒险", value: "C3" }
     ]
   },
   {
@@ -344,10 +344,10 @@ export const questions: Question[] = [
     dimension: "EC",
     text: "朋友约你去鳌太线（中国最难徒步线之一），说「据说最近能走，网上有人刚穿越完」，你会：",
     options: [
-      { text: "立刻买机票！鳌太线是人生必走清单，死了都要去", value: "E" },
-      { text: "先查中国登山协会有没有发禁入公告，合规再去", value: "C" },
-      { text: "等官方开放季节，找专业向导带队", value: "C" },
-      { text: "去什么鳌太，隔壁成熟的太白山南线不香吗", value: "C" }
+      { text: "立刻买机票！鳌太线是人生必走清单，死了都要去", value: "E2" },
+      { text: "先查中国登山协会有没有发禁入公告，合规再去", value: "C4" },
+      { text: "等官方开放季节，找专业向导带队", value: "C5" },
+      { text: "去什么鳌太，隔壁成熟的太白山南线不香吗", value: "C6" }
     ]
   },
   {
@@ -355,23 +355,23 @@ export const questions: Question[] = [
     dimension: "EC",
     text: "在贡嘎雪山徒步时，你们发现一条冰川裂缝上的「近路」，能省2小时但有点危险：",
     options: [
-      { text: "冲！省下的2小时可以在营地多拍日照金山", value: "E" },
-      { text: "绕远路，冰川裂缝不是开玩笑的，命重要", value: "C" },
-      { text: "让领队先过，他没事我们再走", value: "C" },
-      { text: "掏出冰镐和安全带，做好保护再过", value: "C" }
+      { text: "冲！省下的2小时可以在营地多拍日照金山", value: "E3" },
+      { text: "绕远路，冰川裂缝不是开玩笑的，命重要", value: "C7" },
+      { text: "让领队先过，他没事我们再走", value: "C8" },
+      { text: "掏出冰镐和安全带，做好保护再过", value: "C9" }
     ]
   },
-  
+
   // SW 行进节奏维度 (3题) - 冲刺型 vs 漫步型
   {
     id: 4,
     dimension: "SW",
     text: "你们队在四姑娘山大峰冲顶，凌晨3点出发，海拔4200米，你作为财务管着全队的水，你的状态是：",
     options: [
-      { text: "第一个冲出去，高反是什么？我要破FKT记录", value: "S" },
-      { text: "慢慢走，边爬边数星星，日出前到就行", value: "W" },
-      { text: "走在队伍中间，照顾走得慢的队友", value: "W" },
-      { text: "每走50步停下来拍照，冲顶不重要朋友圈重要", value: "W" }
+      { text: "第一个冲出去，高反是什么？我要破FKT记录", value: "S1" },
+      { text: "慢慢走，边爬边数星星，日出前到就行", value: "W1" },
+      { text: "走在队伍中间，照顾走得慢的队友", value: "W2" },
+      { text: "每走50步停下来拍照，冲顶不重要朋友圈重要", value: "W3" }
     ]
   },
   {
@@ -379,10 +379,10 @@ export const questions: Question[] = [
     dimension: "SW",
     text: "经过雨崩神瀑时，一群人在瀑布下转经祈福，你会：",
     options: [
-      { text: "拍张打卡照就走，今天还要赶到尼农峡谷", value: "S" },
-      { text: "加入他们，淋着神水冥想半小时，净化心灵", value: "W" },
-      { text: "坐在旁边石头上，看云卷云舒，等队友", value: "W" },
-      { text: "架起三脚架拍延时，等彩虹出现", value: "W" }
+      { text: "拍张打卡照就走，今天还要赶到尼农峡谷", value: "S2" },
+      { text: "加入他们，淋着神水冥想半小时，净化心灵", value: "W4" },
+      { text: "坐在旁边石头上，看云卷云舒，等队友", value: "W5" },
+      { text: "架起三脚架拍延时，等彩虹出现", value: "W6" }
     ]
   },
   {
@@ -390,23 +390,23 @@ export const questions: Question[] = [
     dimension: "SW",
     text: "领队说今天要从哈巴雪山大本营（4100m）冲顶（5396m）再下撤，全程12小时，你的反应：",
     options: [
-      { text: "才12小时？我可以跑个来回，冲！", value: "S" },
-      { text: "能不能分两天，我想在C1营地看星空", value: "W" },
-      { text: "走到哪算哪，累了就下撤，不勉强", value: "W" },
-      { text: "先问问能不能骑马下撤，保存膝盖", value: "W" }
+      { text: "才12小时？我可以跑个来回，冲！", value: "S3" },
+      { text: "能不能分两天，我想在C1营地看星空", value: "W7" },
+      { text: "走到哪算哪，累了就下撤，不勉强", value: "W8" },
+      { text: "先问问能不能骑马下撤，保存膝盖", value: "W9" }
     ]
   },
-  
+
   // TI 社交模式维度 (3题) - 团队型 vs 独行型
   {
     id: 7,
     dimension: "TI",
     text: "你是这次喀纳斯徒步的后勤，负责全队补给。晚上在禾木村扎营，其他人在篝火旁喝酒唱歌，你会：",
     options: [
-      { text: "冲过去一起嗨！后勤也是人，我也要喝酒！", value: "T" },
-      { text: "躲在帐篷里整理明天的路餐，社交好累", value: "I" },
-      { text: "拿着清单过去，边喝边核对物资", value: "T" },
-      { text: "带着耳机去河边看星星，一个人静静", value: "I" }
+      { text: "冲过去一起嗨！后勤也是人，我也要喝酒！", value: "T1" },
+      { text: "躲在帐篷里整理明天的路餐，社交好累", value: "I1" },
+      { text: "拿着清单过去，边喝边核对物资", value: "T2" },
+      { text: "带着耳机去河边看星星，一个人静静", value: "I2" }
     ]
   },
   {
@@ -414,10 +414,10 @@ export const questions: Question[] = [
     dimension: "TI",
     text: "在狼塔C线（新疆顶级虐线）过冰河时，你的登山鞋湿了，脚冻得发麻，此时你会：",
     options: [
-      { text: "大喊「谁有备用袜子！救命啊！」，等队友支援", value: "T" },
-      { text: "默默换上塑料袋套脚，继续走，不麻烦别人", value: "I" },
-      { text: "找领队汇报，全队商量要不要原地休息", value: "T" },
-      { text: "独自走到前面晒太阳，等脚干了再说", value: "I" }
+      { text: "大喊「谁有备用袜子！救命啊！」，等队友支援", value: "T3" },
+      { text: "默默换上塑料袋套脚，继续走，不麻烦别人", value: "I3" },
+      { text: "找领队汇报，全队商量要不要原地休息", value: "T4" },
+      { text: "独自走到前面晒太阳，等脚干了再说", value: "I4" }
     ]
   },
   {
@@ -425,23 +425,23 @@ export const questions: Question[] = [
     dimension: "TI",
     text: "终于登顶了梅里雪山转山线的最高点（海拔4800m），看到卡瓦格博日照金山，你会：",
     options: [
-      { text: "「啊啊啊啊啊！大家快来看！拍照拍照！", value: "T" },
-      { text: "找个没人的石头坐下，默默流泪，感受神山", value: "I" },
-      { text: "拉着每个队友合影，这是团队的荣耀", value: "T" },
-      { text: "打开卫星电话给父母报平安，然后独自欣赏", value: "I" }
+      { text: "「啊啊啊啊啊！大家快来看！拍照拍照！", value: "T5" },
+      { text: "找个没人的石头坐下，默默流泪，感受神山", value: "I5" },
+      { text: "拉着每个队友合影，这是团队的荣耀", value: "T6" },
+      { text: "打开卫星电话给父母报平安，然后独自欣赏", value: "I6" }
     ]
   },
-  
+
   // MP 装备哲学维度 (3题) - 极简型 vs 完备型
   {
     id: 10,
     dimension: "MP",
     text: "你要走贡嘎大环线（7天无补给），背包限重15kg，你会：",
     options: [
-      { text: "只带速干衣+睡袋+炉头，食物全脱水的，10kg搞定", value: "M" },
-      { text: "帐篷睡袋炉头气罐冲锋衣抓绒羽绒服，15kg刚刚好", value: "P" },
-      { text: "带个西瓜！高原吃西瓜是人类的终极梦想", value: "P" },
-      { text: "再塞个无人机，贡嘎航拍必须安排", value: "P" }
+      { text: "只带速干衣+睡袋+炉头，食物全脱水的，10kg搞定", value: "M1" },
+      { text: "帐篷睡袋炉头气罐冲锋衣抓绒羽绒服，15kg刚刚好", value: "P1" },
+      { text: "带个西瓜！高原吃西瓜是人类的终极梦想", value: "P2" },
+      { text: "再塞个无人机，贡嘎航拍必须安排", value: "P3" }
     ]
   },
   {
@@ -449,10 +449,10 @@ export const questions: Question[] = [
     dimension: "MP",
     text: "在扎尕那（甘南秘境）徒步，你发现队友没带雨衣，而你包里有两件（一件备用），你会：",
     options: [
-      { text: "「我这件备用的是给自己准备的，你自求多福吧」", value: "M" },
-      { text: "立刻把备用雨衣给他，我再背个塑料袋就行", value: "P" },
-      { text: "「我有多带，但你要答应我一件事...」，趁机提条件", value: "P" },
-      { text: "「下次记得带，这次我们一起挤挤」", value: "P" }
+      { text: "「我这件备用的是给自己准备的，你自求多福吧」", value: "M2" },
+      { text: "立刻把备用雨衣给他，我再背个塑料袋就行", value: "P4" },
+      { text: "「我有多带，但你要答应我一件事...」，趁机提条件", value: "P5" },
+      { text: "「下次记得带，这次我们一起挤挤」", value: "P6" }
     ]
   },
   {
@@ -460,10 +460,10 @@ export const questions: Question[] = [
     dimension: "MP",
     text: "你的背包里常年躺着哪些「可能用不上但必须带」的东西？",
     options: [
-      { text: "什么都不带，用不上就是废物，我只带必需品", value: "M" },
-      { text: "急救包、卫星电话、信号镜、净水片、备用电池...", value: "P" },
-      { text: "折叠椅、茶具、手冲咖啡、便携音箱，享受最重要", value: "P" },
-      { text: "防熊喷雾（虽然国内没熊）、冰爪（虽然走的草甸）", value: "P" }
+      { text: "什么都不带，用不上就是废物，我只带必需品", value: "M3" },
+      { text: "急救包、卫星电话、信号镜、净水片、备用电池...", value: "P7" },
+      { text: "折叠椅、茶具、手冲咖啡、便携音箱，享受最重要", value: "P8" },
+      { text: "防熊喷雾（虽然国内没熊）、冰爪（虽然走的草甸）", value: "P9" }
     ]
   }
 ];
@@ -476,15 +476,17 @@ export function calculateResult(answers: Record<number, string>): string {
     TI: { T: 0, I: 0 },
     MP: { M: 0, P: 0 }
   };
-  
+
   // 统计每个维度的得分
   Object.entries(answers).forEach(([questionId, value]) => {
     const qId = parseInt(questionId);
     const question = questions.find(q => q.id === qId);
     if (question) {
       const dim = question.dimension;
-      if (value in scores[dim]) {
-        scores[dim][value as keyof typeof scores["EC"]]++;
+      // 获取选项值的首字母（E1 -> E, C2 -> C, etc.）
+      const dimValue = value.charAt(0) as keyof typeof scores["EC"];
+      if (dimValue in scores[dim]) {
+        scores[dim][dimValue]++;
       }
     }
   });

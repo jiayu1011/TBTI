@@ -11,7 +11,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 max-w-2xl">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-emerald-800 mb-2">TBTI</h1>
-          <p className="text-emerald-600">Trail-Based Type Indicator</p>
+          <p className="text-emerald-600">MBTI已经过时，徒步佬，来测测你的TBTI</p>
           <p className="text-sm text-emerald-500 mt-1">户外徒步人格测试</p>
         </header>
         
