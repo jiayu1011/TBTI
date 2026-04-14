@@ -26,10 +26,17 @@ export default function Welcome() {
         <h2 className="text-3xl font-black text-gray-800 mb-2 tracking-tight">
           徒步人格大测试
         </h2>
-        <p className="text-emerald-600 font-bold text-lg mb-4">TBTI - Trail-Based Type Indicator</p>
+        <p className="text-emerald-600 font-bold text-lg mb-4">TBTI - TuBu Type Indicator</p>
         
+        <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl p-4 mb-6 text-left border border-orange-100">
+          <p className="text-xs text-orange-700 mb-2 font-semibold">🏔️ 为了确保咱们可以同频交流，希望以下词你至少理解5个：</p>
+          <p className="text-xs text-orange-600 leading-relaxed">
+            路书、横切、环线、穿越线、正穿、反穿、达坂、垭口、还有20分钟、老驴、拉练、腐败、外挂、433法则、路餐、LNT、洗头局、窗口期、下撤、背架、车尾灯、拉爆、有腿就行、开路、屁降、绝望坡、捡人、今天很休闲、下次还来
+          </p>
+        </div>
+
         <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-          基于MBTI四维度理论，我们设计了专属于户外徒步的<br/>
+          基于户外圈黑话，我们设计了专属于徒步佬的<br/>
           <span className="text-orange-500 font-semibold">四大性格维度</span>
         </p>
         

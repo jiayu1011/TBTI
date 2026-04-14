@@ -45,7 +45,176 @@ export const dimensions = {
 };
 
 export const tbtiTypes: Record<string, TBTIType> = {
-  // E___ 探险型组合
+  // 特色类型 - 户外圈梗角色
+  LEGLAG: {
+    code: "LEGLAG",
+    name: "菜腿",
+    title: "等等我，我还在走呢~",
+    description: "装备比谁都齐，膝盖比谁都软。你是团队里的「移动路障」，永远在被捡的路上。虽然走得慢，但你从不放弃，因为「来都来了」。",
+    traits: ["装备党", "膝盖软", "永远落后", "从不放弃"],
+    classicQuotes: ["还有多远？", "我是谁我在哪", "等等我", "我的膝盖..."],
+    bestPartners: ["LIFER（续命者）", "RETREAT（首席下撤官）"],
+    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
+    survivalTips: "建议多带护膝，少走绝望坡",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  RETREAT: {
+    code: "RETREAT",
+    name: "首席下撤官",
+    title: "安全第一，我们这就撤！",
+    description: "感知危险的雷达满格。只要云多了一朵、风大了一级，你就是那个最坚定带头下撤的人。保命要紧，撤退也是一种智慧！",
+    traits: ["危险雷达", "下撤专家", "安全第一", "保命大师"],
+    classicQuotes: ["云来了，撤！", "风太大，撤！", "要下雨了，撤！", "命要紧"],
+    bestPartners: ["LEGLAG（菜腿）", "LIFER（续命者）"],
+    worstPartners: ["GOGO（行者）", "WILD（野路狂魔）"],
+    survivalTips: "建议带卫星电话，方便叫救援",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  LABAO: {
+    code: "LABAO",
+    name: "辣堡美食家",
+    title: "被人拉爆的感觉，就像吃了一个绝命辣堡！",
+    description: "不是在被拉爆，就是在去被拉爆的路上。虽然走得痛苦，但主打一个「重在参与」和「品鉴痛苦」。你是团队里的「辣堡品鉴师」。",
+    traits: ["被拉爆专业户", "痛苦面具", "重在参与", "辣堡鉴赏"],
+    classicQuotes: ["又被拉爆了", "这辣堡真香", "等等我", "我腿没了"],
+    bestPartners: ["RETREAT（首席下撤官）", "LEGLAG（菜腿）"],
+    worstPartners: ["GOGO（行者）", "STRONG（强驴大师）"],
+    survivalTips: "建议多带能量胶，被拉爆时补充体力",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
+  },
+  STRONG: {
+    code: "STRONG",
+    name: "强驴大师",
+    title: "重装40斤？那叫负重训练。",
+    description: "腿上长了马达，背上背了全家。你是大家的希望，是行走的补给站，是永远看不见背影的神。菜腿们的偶像，拉爆者的噩梦。",
+    traits: ["人形马达", "重装大佬", "拉爆全场", "永远在前"],
+    classicQuotes: ["有腿就行", "这算什么", "快点", "你们太慢了"],
+    bestPartners: ["LIFER（续命者）", "GOGO（行者）"],
+    worstPartners: ["LEGLAG（菜腿）", "RETREAT（首席下撤官）"],
+    survivalTips: "建议多等等队友，不然以后没人跟你爬了",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
+  },
+  MSDL: {
+    code: "MSDL",
+    name: "诈骗者",
+    title: "马上到了",
+    description: "你是团队里的「希望传播者」，永远在喊「马上到了」，但这个「马上」可能是半小时，也可能是三小时。你的存在让队友在绝望中依然保持前行的动力。",
+    traits: ["时间管理大师", "画饼专家", "心理安慰师", "被打风险高"],
+    classicQuotes: ["再走十分钟", "转过这个弯就到了", "前面就是平路了", "真的马上到了"],
+    bestPartners: ["LDLL（来都来了人）", "REGRET（马后炮人）"],
+    worstPartners: ["OHNO（放弃者）", "WOC（握草人）"],
+    survivalTips: "建议携带GPS和测距仪，不然容易被队友群殴",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
+  },
+  LDLL: {
+    code: "LDLL",
+    name: "来都来了人",
+    title: "四字真言",
+    description: "你的口头禅是「来都来了」，即使刚出门就想回家，也能靠着这四个字的魔力走完全程。你是团队的精神支柱，用行动诠释了什么叫「既来之则安之」。",
+    traits: ["自我催眠大师", "四字真言", "忍耐力MAX", "后悔但坚持"],
+    classicQuotes: ["来都来了", "钱都花了", "大过年的", "还是孩子"],
+    bestPartners: ["MSDL（诈骗者）", "GOGO（行者）"],
+    worstPartners: ["OHNO（放弃者）", "IMOK（嘴硬者）"],
+    survivalTips: "多带糖果，甜食能缓解后悔情绪",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  REGRET: {
+    code: "REGRET",
+    name: "马后炮人",
+    title: "早知道不来了",
+    description: "你一路都在说「早知道不来了」，但真让你回去你又不乐意。你是团队里的「复读机」，用抱怨来掩饰对户外活动的热爱。",
+    traits: ["复读机", "口是心非", "抱怨专家", "真香定律"],
+    classicQuotes: ["早知道不来了", "我脑子进水了才报名", "下次再也不来了", "真香"],
+    bestPartners: ["WOC（握草人）", "MSDL（诈骗者）"],
+    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
+    survivalTips: "建议带耳塞，不然自己的抱怨会让自己更烦",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  ASKER: {
+    code: "ASK-ER",
+    name: "讨好者",
+    title: "叫人爬山比偷人还难",
+    description: "你为了叫人爬山什么都愿意干：请客、发红包、当牛做马...结果发现叫人爬山比偷人还难。你是团队的发起人，虽然过程卑微，但终于凑齐了人。",
+    traits: ["卑微求组队", "请客达人", "社交悍匪", "为爱发电"],
+    classicQuotes: ["我请客", "给你发红包", "求你了", "就差你一个了"],
+    bestPartners: ["LDLL（来都来了人）", "LIFER（续命者）"],
+    worstPartners: ["OHNO（放弃者）", "REGRET（马后炮人）"],
+    survivalTips: "建议找几个固定的爬山搭子，别再当舔狗了",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  WOC: {
+    code: "WOC",
+    name: "握草人",
+    title: "骂骂咧咧但不停",
+    description: "你一路都在「握草」、「卧槽」、「我靠」，嘴上抱怨个不停，脚却一点没停下来。你是团队里的「永动机」，用脏话给自己加油打气。",
+    traits: ["脏话连篇", "永动机", "嘴硬心软", "自驱力强"],
+    classicQuotes: ["握草这坡", "卧槽累死了", "我靠还有多远", "mdzz但继续爬"],
+    bestPartners: ["REGRET（马后炮人）", "GOGO（行者）"],
+    worstPartners: ["ASK-ER（讨好者）", "OHNO（放弃者）"],
+    survivalTips: "建议带口香糖，骂累了可以嚼一嚼",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
+  },
+  BBBB: {
+    code: "BBBB",
+    name: "疯行者",
+    title: "精力过剩症患者",
+    description: "你一路不停地上蹿下跳、大声尖叫，精力旺盛得像吃了炫迈。你是团队的「气氛组」，用疯狂的举动感染每一个人。",
+    traits: ["精力过剩", "气氛组", "尖叫鸡", "社交牛逼症"],
+    classicQuotes: ["啊啊啊啊啊", "哇塞", "冲鸭", "芜湖起飞"],
+    bestPartners: ["GOGO（行者）", "LIFER（续命者）"],
+    worstPartners: ["REGRET（马后炮人）", "IMOK（嘴硬者）"],
+    survivalTips: "建议带润喉糖，尖叫多了嗓子疼",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
+  },
+  GOGO: {
+    code: "GOGO",
+    name: "行者",
+    title: "重装如履平地",
+    description: "你全程猛爬不带喘气，背着重装包如履平地，轻松拉爆所有人。你是团队的「大腿」，别人在喘气你在等他们。",
+    traits: ["体能怪物", "拉爆全场", "重装大佬", "人形自走机"],
+    classicQuotes: ["快点", "你们太慢了", "前面风景不错", "这就累了？"],
+    bestPartners: ["LIFER（续命者）", "BBBB（疯行者）"],
+    worstPartners: ["REGRET（马后炮人）", "OHNO（放弃者）"],
+    survivalTips: "建议多等等队友，不然以后没人跟你爬了",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
+  },
+  IMOK: {
+    code: "IMOK",
+    name: "嘴硬者",
+    title: "有腿就行",
+    description: "你走得腿都已经打摆摆了，问你怎么样，你说「可好了，有腿就行」。你是团队里的「嘴硬王者」，宁可累死也不认输。",
+    traits: ["死鸭子嘴硬", "有腿就行", "不服输", "面子大于天"],
+    classicQuotes: ["有腿就行", "小意思", "不累", "就这？"],
+    bestPartners: ["WOC（握草人）", "LDLL（来都来了人）"],
+    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
+    survivalTips: "建议带护膝，嘴硬但膝盖要保护好",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
+  },
+  LIFER: {
+    code: "LIFE-ER",
+    name: "续命者",
+    title: "移动补给站",
+    description: "你的背包比别人大两圈，全队人都靠你续命。你是团队的「移动补给站」，从创可贴到火锅底料应有尽有。",
+    traits: ["哆啦A梦", "移动仓库", "全队奶妈", "百宝箱"],
+    classicQuotes: ["我有", "还要吗", "多带点以防万一", "这个我有"],
+    bestPartners: ["GOGO（行者）", "ASK-ER（讨好者）"],
+    worstPartners: ["MSDL（诈骗者）", "OHNO（放弃者）"],
+    survivalTips: "建议带推车，背包太重了",
+    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
+  },
+  OHNO: {
+    code: "OH-NO",
+    name: "放弃者",
+    title: "回去就卖装备",
+    description: "你发现户外实在太累了，回去就把装备全卖了。你是团队里的「一次性选手」，爬一次山需要休息一年来恢复。",
+    traits: ["一次性选手", "卖装备专家", "恢复周期长", "下次还敢"],
+    classicQuotes: ["我不行了", "我要回去", "装备卖了", "下次不来了"],
+    bestPartners: ["LDLL（来都来了人）", "LIFER（续命者）"],
+    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
+    survivalTips: "建议别买太贵装备，卖的时候心疼",
+    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
+  },
+  // 16种标准维度组合
   ESTP: {
     code: "ESTP",
     name: "野路狂魔",
@@ -94,225 +263,53 @@ export const tbtiTypes: Record<string, TBTIType> = {
     survivalTips: "带个哨子，遇到熊的时候能派上用场",
     dimensionScores: { EC: "E", SW: "W", TI: "I", MP: "M" }
   },
-  // C___ 经典型组合
   CSTP: {
     code: "CSTP",
     name: "经典路线守护者",
-    title: "成熟路线的忠实信徒",
-    description: "你只走标记清晰的经典路线，带着齐全装备确保万无一失。你是团队里的「安全员」，有你在大家都能安心享受徒步的乐趣。",
-    traits: ["安全第一", "经验丰富", "团队核心", "准备充分"],
-    classicQuotes: ["这条路很成熟", "标记很清晰", "装备要齐全", "安全第一"],
-    bestPartners: ["CSWP（经典漫步者）", "ESTP（野路狂魔）"],
+    title: "成熟路线才是真爱",
+    description: "你只走标记清晰的成熟路线，野路是什么？不认识。你是团队里的「安全员」，确保每个人都能平安回家。",
+    traits: ["安全第一", "路线规划师", "成熟路线控", "靠谱队友"],
+    classicQuotes: ["这路我走过", "标记很清晰", "安全第一", "别走野路"],
+    bestPartners: ["CSTW（经典漫步者）", "ESTP（野路狂魔-互补型）"],
     worstPartners: ["ESTM（野路闪电侠）", "EIWM（独行禅意者）"],
-    survivalTips: "偶尔也试试野路，人生需要一点刺激",
+    survivalTips: "偶尔也可以尝试下野路，人生需要一点刺激",
     dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
   },
   CSTM: {
     code: "CSTM",
-    name: "经典速攀者",
-    title: "FKT挑战者",
-    description: "你在经典路线上挑战速度记录，用最轻的装备创造最好的成绩。你是数据控，是竞技狂，每一秒都值得被优化。",
-    traits: ["速度至上", "数据控", "竞技精神", "极简高效"],
-    classicQuotes: ["刷新PB了", "还能更快", "装备要轻", "经典路线也能玩出花"],
-    bestPartners: ["CSTP（经典路线守护者）", "ESTM（野路闪电侠）"],
-    worstPartners: ["CSWP（经典漫步者）", "EIWP（独行享乐家）"],
-    survivalTips: "别为了速度错过路上的风景",
+    name: "经典速穿者",
+    title: "轻装快走成熟线",
+    description: "你用最少的装备，走最成熟的路线，以最快的速度完成挑战。效率至上，不拖泥带水，你是团队里的「效率专家」。",
+    traits: ["效率至上", "轻装速穿", "成熟路线", "不拖泥带水"],
+    classicQuotes: ["快点走完", "装备越轻越好", "成熟线才安全", "效率第一"],
+    bestPartners: ["CSTP（经典路线守护者）", "GOGO（行者）"],
+    worstPartners: ["EIWP（独行享乐家）", "ESWP（野路漫步者）"],
+    survivalTips: "慢下来才能看到风景，别总是赶路",
     dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
   },
   CIWP: {
     code: "CIWP",
     name: "经典独行享乐家",
-    title: "一个人的精致旅行",
-    description: "你独自走在经典路线上，带着舒适的装备，享受独处的宁静时光。不需要冒险，只需要舒适，这是属于你的小确幸。",
-    traits: ["享受独处", "生活品质", "经典路线", "舒适至上"],
-    classicQuotes: ["一个人很自在", "经典路线安全", "装备要舒适", "不赶时间"],
+    title: "一个人的精致徒步",
+    description: "你独自走在成熟的线路上，带着舒适的装备，享受独处的时光。不需要冒险，不需要社交，只有你和风景。",
+    traits: ["独处享受", "精致生活", "经典路线", "安全可靠"],
+    classicQuotes: ["一个人真好", "这椅子超舒服", "经典线才安全", "社交太累了"],
     bestPartners: ["CIWM（经典禅意者）", "EIWP（独行享乐家）"],
-    worstPartners: ["BBBB（疯行者）", "ESTP（野路狂魔）"],
-    survivalTips: "经典路线人多，记得早点出发避开人群",
+    worstPartners: ["ESTP（野路狂魔）", "BBBB（疯行者）"],
+    survivalTips: "经典路线也要告诉家人，安全第一",
     dimensionScores: { EC: "C", SW: "W", TI: "I", MP: "P" }
   },
   CIWM: {
     code: "CIWM",
     name: "经典禅意者",
-    title: "古道上的哲学家",
-    description: "你独自在经典路线上慢慢行走，不带太多装备，让思绪随着脚步飘远。古道、茶香、一本书，这就是你的理想徒步。",
-    traits: ["深度思考", "哲学气质", "经典路线", "简约生活"],
-    classicQuotes: ["古道有故事", "慢走才能思考", "不需要太多装备", "一个人更静"],
+    title: "成熟路线上的冥想者",
+    description: "你独自走在成熟的线路上，不带太多装备，只为与大自然对话。安全的环境中寻找内心的平静，你是团队里的「心灵导师」。",
+    traits: ["内心宁静", "极简修行", "经典路线", "安全可靠"],
+    classicQuotes: ["山中有答案", "轻装才能感悟", "一个人走更静", "经典线更安全"],
     bestPartners: ["CIWP（经典独行享乐家）", "EIWM（独行禅意者）"],
     worstPartners: ["BBBB（疯行者）", "ESTM（野路闪电侠）"],
-    survivalTips: "带本好书，休息时读几页很有意境",
+    survivalTips: "经典路线也有风险，注意安全",
     dimensionScores: { EC: "C", SW: "W", TI: "I", MP: "M" }
-  },
-  // 团队漫步型
-  ESWP: {
-    code: "ESWP",
-    name: "野路摄影师",
-    title: "镜头里的荒野美学",
-    description: "你和朋友们一起探索野路，用镜头记录每一个精彩瞬间。你背着摄影器材走在队伍最后，但拍出的照片让所有人都觉得值得等待。",
-    traits: ["审美敏锐", "耐心细致", "野路探索", "团队记录者"],
-    classicQuotes: ["等等我拍一张", "这个角度绝了", "野路风景更好", "照片出来了"],
-    bestPartners: ["ESWM（野路生活家）", "CSWP（经典漫步者）"],
-    worstPartners: ["ESTM（野路闪电侠）", "CSTM（经典速攀者）"],
-    survivalTips: "相机要轻，不然背着太累了",
-    dimensionScores: { EC: "E", SW: "W", TI: "T", MP: "P" }
-  },
-  ESWM: {
-    code: "ESWM",
-    name: "野路生活家",
-    title: "荒野中的精致露营",
-    description: "你和朋友们在野路中寻找隐秘的露营点，带着轻量化装备享受户外生活。你们不赶时间，只为在大自然中享受每一刻。",
-    traits: ["注重体验", "舒适至上", "野路探索", "社交达人"],
-    classicQuotes: ["这里露营绝了", "慢慢来", "野路才有意思", "大家一起才好玩"],
-    bestPartners: ["ESWP（野路摄影师）", "CSWP（经典漫步者）"],
-    worstPartners: ["ESTM（野路闪电侠）", "IMOK（嘴硬者）"],
-    survivalTips: "野路露营要注意安全，选平坦的地方",
-    dimensionScores: { EC: "E", SW: "W", TI: "T", MP: "M" }
-  },
-  CSWP: {
-    code: "CSWP",
-    name: "经典漫步者",
-    title: "风景与美食兼得",
-    description: "你和朋友们选择舒适的经典路线，慢慢走，好好吃，享受每一个休息点。你们是「徒步美食团」，风景要看，美食也不能少。",
-    traits: ["享受生活", "美食爱好", "经典路线", "社交活跃"],
-    classicQuotes: ["前面有补给点", "这个超好吃", "慢慢走", "大家一起才开心"],
-    bestPartners: ["CSWM（经典生活家）", "ESWP（野路摄影师）"],
-    worstPartners: ["CSTM（经典速攀者）", "ESTM（野路闪电侠）"],
-    survivalTips: "多带点零食，徒步和美食更配",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
-  },
-  CSWM: {
-    code: "CSWM",
-    name: "经典生活家",
-    title: "轻装漫步的悠闲派",
-    description: "你和朋友们轻装走在经典路线上，不赶时间，不带太多装备，只为享受和朋友们在一起的时光。简单、轻松、快乐。",
-    traits: ["轻松自在", "极简出行", "经典路线", "团队和谐"],
-    classicQuotes: ["少带点东西", "慢慢走", "经典路线安全", "大家在一起就好"],
-    bestPartners: ["CSWP（经典漫步者）", "ESWM（野路生活家）"],
-    worstPartners: ["GOGO（行者）", "ESTM（野路闪电侠）"],
-    survivalTips: "水还是要带够，轻装不代表什么都不带",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "M" }
-  },
-  // 团队冲刺型
-  BBBB: {
-    code: "BBBB",
-    name: "疯行者",
-    title: "上蹿下跳尖叫鸡",
-    description: "你一路不停地上蹿下跳、大声尖叫，精力旺盛得像吃了炫迈。你是团队的「气氛组」，用疯狂的举动感染每一个人。",
-    traits: ["精力过剩", "气氛组", "尖叫鸡", "社交牛逼症"],
-    classicQuotes: ["啊啊啊啊啊", "哇塞", "冲鸭", "芜湖起飞"],
-    bestPartners: ["GOGO（行者）", "LIFEER（续命者）"],
-    worstPartners: ["REGRET（马后炮人）", "I-M-OK（嘴硬者）"],
-    survivalTips: "建议带润喉糖，尖叫多了嗓子疼",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
-  },
-  GOGO: {
-    code: "GOGO",
-    name: "行者",
-    title: "重装如履平地",
-    description: "你全程猛爬不带喘气，背着重装包如履平地，轻松拉爆所有人。你是团队的「大腿」，别人在喘气你在等他们。",
-    traits: ["体能怪物", "拉爆全场", "重装大佬", "人形自走机"],
-    classicQuotes: ["快点", "你们太慢了", "前面风景不错", "这就累了？"],
-    bestPartners: ["LIFEER（续命者）", "BBBB（疯行者）"],
-    worstPartners: ["REGRET（马后炮人）", "OH-NO（放弃者）"],
-    survivalTips: "建议多等等队友，不然以后没人跟你爬了",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
-  },
-  // 特色类型
-  MSDL: {
-    code: "MSDL",
-    name: "诈骗者",
-    title: "马上到了",
-    description: "你是团队里的「希望传播者」，永远在喊「马上到了」，但这个「马上」可能是半小时，也可能是三小时。你的存在让队友在绝望中依然保持前行的动力。",
-    traits: ["时间管理大师", "画饼专家", "心理安慰师", "被打风险高"],
-    classicQuotes: ["再走十分钟", "转过这个弯就到了", "前面就是平路了", "真的马上到了"],
-    bestPartners: ["LDLL（来都来了人）", "REGRET（马后炮人）"],
-    worstPartners: ["OH-NO（放弃者）", "WOC（握草人）"],
-    survivalTips: "建议携带GPS和测距仪，不然容易被队友群殴",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
-  },
-  LDLL: {
-    code: "LDLL",
-    name: "来都来了人",
-    title: "四字真言",
-    description: "你的口头禅是「来都来了」，即使刚出门就想回家，也能靠着这四个字的魔力走完全程。你是团队的精神支柱，用行动诠释了什么叫「既来之则安之」。",
-    traits: ["自我催眠大师", "四字真言", "忍耐力MAX", "后悔但坚持"],
-    classicQuotes: ["来都来了", "钱都花了", "大过年的", "还是孩子"],
-    bestPartners: ["MSDL（诈骗者）", "GOGO（行者）"],
-    worstPartners: ["OH-NO（放弃者）", "I-M-OK（嘴硬者）"],
-    survivalTips: "多带糖果，甜食能缓解后悔情绪",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
-  },
-  REGRET: {
-    code: "REGRET",
-    name: "马后炮人",
-    title: "早知道不来了",
-    description: "你一路都在说「早知道不来了」，但真让你回去你又不乐意。你是团队里的「复读机」，用抱怨来掩饰对户外活动的热爱。",
-    traits: ["复读机", "口是心非", "抱怨专家", "真香定律"],
-    classicQuotes: ["早知道不来了", "我脑子进水了才报名", "下次再也不来了", "真香"],
-    bestPartners: ["WOC（握草人）", "MSDL（诈骗者）"],
-    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
-    survivalTips: "建议带耳塞，不然自己的抱怨会让自己更烦",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
-  },
-  ASKER: {
-    code: "ASK-ER",
-    name: "讨好者",
-    title: "叫人爬山比偷人还难",
-    description: "你为了叫人爬山什么都愿意干：请客、发红包、当牛做马...结果发现叫人爬山比偷人还难。你是团队的发起人，虽然过程卑微，但终于凑齐了人。",
-    traits: ["卑微求组队", "请客达人", "社交悍匪", "为爱发电"],
-    classicQuotes: ["我请客", "给你发红包", "求你了", "就差你一个了"],
-    bestPartners: ["LDLL（来都来了人）", "LIFEER（续命者）"],
-    worstPartners: ["OH-NO（放弃者）", "REGRET（马后炮人）"],
-    survivalTips: "建议找几个固定的爬山搭子，别再当舔狗了",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
-  },
-  WOC: {
-    code: "WOC",
-    name: "握草人",
-    title: "骂骂咧咧但不停",
-    description: "你一路都在「握草」、「卧槽」、「我靠」，嘴上抱怨个不停，脚却一点没停下来。你是团队里的「永动机」，用脏话给自己加油打气。",
-    traits: ["脏话连篇", "永动机", "嘴硬心软", "自驱力强"],
-    classicQuotes: ["握草这坡", "卧槽累死了", "我靠还有多远", "mdzz但继续爬"],
-    bestPartners: ["REGRET（马后炮人）", "GOGO（行者）"],
-    worstPartners: ["ASK-ER（讨好者）", "OH-NO（放弃者）"],
-    survivalTips: "建议带口香糖，骂累了可以嚼一嚼",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
-  },
-  IMOK: {
-    code: "IMOK",
-    name: "嘴硬者",
-    title: "有腿就行",
-    description: "你走得腿都已经打摆摆了，问你怎么样，你说「可好了，有腿就行」。你是团队里的「嘴硬王者」，宁可累死也不认输。",
-    traits: ["死鸭子嘴硬", "有腿就行", "不服输", "面子大于天"],
-    classicQuotes: ["有腿就行", "小意思", "不累", "就这？"],
-    bestPartners: ["WOC（握草人）", "LDLL（来都来了人）"],
-    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
-    survivalTips: "建议带护膝，嘴硬但膝盖要保护好",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "M" }
-  },
-  LIFEER: {
-    code: "LIFE-ER",
-    name: "续命者",
-    title: "移动补给站",
-    description: "你的背包比别人大两圈，全队人都靠你续命。你是团队的「移动补给站」，从创可贴到火锅底料应有尽有。",
-    traits: ["哆啦A梦", "移动仓库", "全队奶妈", "百宝箱"],
-    classicQuotes: ["我有", "还要吗", "多带点以防万一", "这个我有"],
-    bestPartners: ["GOGO（行者）", "ASK-ER（讨好者）"],
-    worstPartners: ["MSDL（诈骗者）", "OH-NO（放弃者）"],
-    survivalTips: "建议带推车，背包太重了",
-    dimensionScores: { EC: "C", SW: "S", TI: "T", MP: "P" }
-  },
-  OHNO: {
-    code: "OH-NO",
-    name: "放弃者",
-    title: "回去就卖装备",
-    description: "你发现户外实在太累了，回去就把装备全卖了。你是团队里的「一次性选手」，爬一次山需要休息一年来恢复。",
-    traits: ["一次性选手", "卖装备专家", "恢复周期长", "下次还敢"],
-    classicQuotes: ["我不行了", "我要回去", "装备卖了", "下次不来了"],
-    bestPartners: ["LDLL（来都来了人）", "LIFEER（续命者）"],
-    worstPartners: ["GOGO（行者）", "BBBB（疯行者）"],
-    survivalTips: "建议别买太贵装备，卖的时候心疼",
-    dimensionScores: { EC: "C", SW: "W", TI: "T", MP: "P" }
   }
 };
 
@@ -490,38 +487,44 @@ export function calculateResult(answers: Record<number, string>): string {
       }
     }
   });
-  
+
   // 确定每个维度的倾向
   const dimension1 = scores.EC.E >= scores.EC.C ? 'E' : 'C';
   const dimension2 = scores.SW.S >= scores.SW.W ? 'S' : 'W';
   const dimension3 = scores.TI.T >= scores.TI.I ? 'T' : 'I';
   const dimension4 = scores.MP.M >= scores.MP.P ? 'M' : 'P';
-  
+
   const resultCode = dimension1 + dimension2 + dimension3 + dimension4;
-  
+
   // 如果结果不在预定义类型中，返回最接近的特色类型
   if (tbtiTypes[resultCode]) {
     return resultCode;
   }
-  
+
   // 回退逻辑：根据得分特征返回特色类型
+  if (scores.EC.C >= 2 && scores.SW.W >= 2 && scores.TI.T >= 2) {
+    if (scores.MP.P >= 2) return "LEGLAG";
+    if (scores.SW.S >= 2) return "LABAO";
+    return "RETREAT";
+  }
+
   if (scores.EC.C >= 2 && scores.SW.S >= 2 && scores.TI.T >= 2) {
-    if (scores.MP.P >= 2) return "MSDL";
+    if (scores.MP.P >= 2) return "STRONG";
     if (scores.SW.W >= 2) return "LDLL";
     if (scores.SW.S >= 2 && scores.MP.M >= 2) return "WOC";
     return "GOGO";
   }
-  
+
   if (scores.EC.C >= 2 && scores.SW.W >= 2 && scores.TI.T >= 2) {
     if (scores.MP.P >= 2) return "REGRET";
     return "ASKER";
   }
-  
-  if (scores.MP.P >= 2 && scores.TI.T >= 2) return "LIFEER";
+
+  if (scores.MP.P >= 2 && scores.TI.T >= 2) return "LIFER";
   if (scores.EC.C >= 2 && scores.SW.W >= 2) return "OHNO";
   if (scores.SW.S >= 2 && scores.MP.M >= 2) return "IMOK";
   if (scores.TI.T >= 2 && scores.SW.S >= 2) return "BBBB";
-  
+
   return "LDLL"; // 默认返回最通用的类型
 }
 
@@ -533,18 +536,18 @@ export function getDimensionScores(answers: Record<number, string>) {
     TI: { T: 0, I: 0 },
     MP: { M: 0, P: 0 }
   };
-  
+
   Object.entries(answers).forEach(([questionId, value]) => {
     const qId = parseInt(questionId);
     const question = questions.find(q => q.id === qId);
     if (question) {
       const dim = question.dimension;
-      if (value in scores[dim]) {
-        scores[dim][value as keyof typeof scores["EC"]]++;
+      const dimValue = value.charAt(0) as keyof typeof scores["EC"];
+      if (dimValue in scores[dim]) {
+        scores[dim][dimValue]++;
       }
     }
   });
-  
+
   return scores;
 }
-
