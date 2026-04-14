@@ -45,12 +45,21 @@ export default function ResultCard() {
   return (
     <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
       {/* Header */}
-      <div className={`relative h-48 bg-gradient-to-br ${gradientColor} flex items-center justify-center`}>
+      <div className={`relative h-56 bg-gradient-to-br ${gradientColor} flex items-center justify-center`}>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/30 rounded-full blur-xl"></div>
           <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
         </div>
+        {/* 神秘园氛围装饰 */}
+        <div className="absolute top-4 left-4 text-white/30 text-2xl">🏔️</div>
+        <div className="absolute top-8 right-8 text-white/30 text-xl">✨</div>
+        <div className="absolute bottom-20 left-8 text-white/30 text-lg">🌙</div>
+        <div className="absolute top-16 right-16 text-white/30 text-sm">⭐</div>
+        
         <div className="relative text-center text-white z-10 px-6">
+          <p className="text-xs italic opacity-70 mb-2 tracking-widest font-light">
+            "山野自有答案"
+          </p>
           <p className="text-sm font-medium opacity-80 mb-2 tracking-wider">你的徒步人格是</p>
           <h2 className="text-4xl font-black mb-1 tracking-tight">{typeData.name}</h2>
           <p className="text-lg font-bold opacity-90">{typeData.title}</p>
@@ -152,6 +161,14 @@ export default function ResultCard() {
           </div>
         )}
         
+        {/* 神秘园引言 */}
+        <div className="bg-gradient-to-br from-slate-800 via-purple-900 to-slate-900 rounded-2xl p-5 mb-6 text-center border border-purple-700/30">
+          <p className="text-purple-200 text-xs italic font-light tracking-wide leading-relaxed">
+            "每一次出发，都是与未知的自己相遇。<br/>
+            山不会记住你，但你会记住山。"
+          </p>
+        </div>
+
         {/* Description */}
         <div className="bg-gray-50 rounded-2xl p-5 mb-6">
           <p className="text-gray-700 text-center leading-relaxed text-sm">
@@ -248,6 +265,13 @@ export default function ResultCard() {
           </button>
         </div>
         
+        {/* 神秘园结语 */}
+        <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 rounded-xl p-4 mb-4 text-center border border-emerald-100">
+          <p className="text-emerald-700 text-xs italic font-light tracking-wide">
+            "愿你的每一次徒步，都能找到属于自己的那片山野 🏔️"
+          </p>
+        </div>
+
         <p className="text-center text-xs text-gray-400 mt-4">
           测试结果仅供娱乐，请勿对号入座（虽然真的很准）😏
         </p>

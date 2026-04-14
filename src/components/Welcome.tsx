@@ -28,8 +28,26 @@ export default function Welcome() {
         </h2>
         <p className="text-emerald-600 font-bold text-lg mb-4">TBTI - TuBu Type Indicator</p>
         
+        {/* 神秘园氛围文案 */}
+        <div className="bg-gradient-to-br from-slate-800 via-purple-900 to-slate-900 rounded-xl p-5 mb-6 text-center border border-purple-700/50 shadow-lg shadow-purple-500/20">
+          <p className="text-purple-200 text-sm italic mb-3 font-light tracking-wide">
+            "在海拔4000米的垭口，风会告诉你答案"
+          </p>
+          <p className="text-purple-300 text-xs leading-relaxed opacity-80">
+            每一个深夜打包的背包，每一张手绘的路书，<br/>
+            每一次站在山脊线上的沉默，<br/>
+            都是灵魂与山野的对话。
+          </p>
+          <div className="flex justify-center gap-2 mt-3">
+            <span className="text-lg">🏔️</span>
+            <span className="text-lg">🌙</span>
+            <span className="text-lg">✨</span>
+            <span className="text-lg">🥾</span>
+          </div>
+        </div>
+
         <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl p-4 mb-6 text-left border border-orange-100">
-          <p className="text-xs text-orange-700 mb-2 font-semibold">🏔️ 为了确保咱们可以同频交流，希望以下词你至少理解5个：</p>
+          <p className="text-xs text-orange-700 mb-2 font-semibold">🗣️ 为了确保咱们可以同频交流，希望以下词你至少理解5个：</p>
           <p className="text-xs text-orange-600 leading-relaxed">
             路书、横切、环线、穿越线、正穿、反穿、达坂、垭口、还有20分钟、老驴、拉练、腐败、外挂、433法则、路餐、LNT、洗头局、窗口期、下撤、背架、车尾灯、拉爆、有腿就行、开路、屁降、绝望坡、捡人、今天很休闲、下次还来
           </p>
