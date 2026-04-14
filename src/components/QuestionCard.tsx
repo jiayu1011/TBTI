@@ -1,17 +1,14 @@
 import { useTBTIStore } from '@/store/tbtiStore';
-import { questions, dimensions } from '@/data/tbtiTypes';
-import { ChevronLeft, ChevronRight, Footprints } from 'lucide-react';
+import { questions } from '@/data/tbtiTypes';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function QuestionCard() {
   const { currentQuestion, answers, setAnswer, nextQuestion, prevQuestion } = useTBTIStore();
   const question = questions[currentQuestion - 1];
   const selectedAnswer = answers[question.id];
-  
+
   const progress = ((currentQuestion) / questions.length) * 100;
-  
-  // 获取当前维度的信息
-  const dimensionInfo = dimensions[question.dimension];
-  
+
   const handleOptionClick = (value: string) => {
     setAnswer(question.id, value);
     setTimeout(() => {
@@ -35,11 +32,11 @@ export default function QuestionCard() {
         </div>
       </div>
       
-      {/* Dimension Badge */}
+      {/* Question Number Badge */}
       <div className="mb-4">
         <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded-full">
           <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-          {dimensionInfo.name}维度
+          第 {currentQuestion} 题
         </span>
       </div>
       
@@ -53,9 +50,6 @@ export default function QuestionCard() {
       {/* Options */}
       <div className="space-y-3 mb-6">
         {question.options.map((option, index) => {
-          const isLeft = index === 0;
-          const sideInfo = isLeft ? dimensionInfo.left : dimensionInfo.right;
-          
           return (
             <button
               key={index}
@@ -77,36 +71,16 @@ export default function QuestionCard() {
                   )}
                 </div>
                 <div className="flex-1">
-                  <span className={`font-medium text-sm leading-relaxed block mb-1 ${
+                  <span className={`font-medium text-sm leading-relaxed block ${
                     selectedAnswer === option.value ? 'text-emerald-800' : 'text-gray-700'
                   }`}>
                     {option.text}
-                  </span>
-                  <span className="text-xs text-gray-400">
-                    {sideInfo.code} - {sideInfo.name}
                   </span>
                 </div>
               </div>
             </button>
           );
         })}
-      </div>
-      
-      {/* Dimension Scale */}
-      <div className="bg-gray-50 rounded-xl p-4 mb-6">
-        <div className="flex justify-between items-center text-xs">
-          <div className="text-center">
-            <span className="font-bold text-emerald-600">{dimensionInfo.left.code}</span>
-            <p className="text-gray-500 mt-1">{dimensionInfo.left.name}</p>
-          </div>
-          <div className="flex-1 mx-4 h-2 bg-gray-200 rounded-full relative">
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-emerald-400 rounded-full"></div>
-          </div>
-          <div className="text-center">
-            <span className="font-bold text-teal-600">{dimensionInfo.right.code}</span>
-            <p className="text-gray-500 mt-1">{dimensionInfo.right.name}</p>
-          </div>
-        </div>
       </div>
       
       {/* Navigation */}
