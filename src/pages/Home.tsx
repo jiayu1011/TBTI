@@ -23,6 +23,7 @@ export default function Home() {
         
         <footer className="text-center mt-12 text-emerald-400 text-sm">
           <p>发现你的户外徒步人格类型</p>
+          <p className="mt-2">作者 @jiayu1011</p>
         </footer>
       </div>
     </div>
